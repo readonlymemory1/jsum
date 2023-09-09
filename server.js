@@ -16,5 +16,5 @@ function ServerCode(show){
     });
     server.listen(3000);
 }
-
+console.log("start server")
 exports.ServerCode = ServerCode;
