@@ -1,14 +1,14 @@
 //import line
 const  http = require('http');
 const fs = require('fs');
-const parse = require('./parse.js');
+const jsum = require('./jsum_lib/jsum.js');
 
-function ServerCode(){
+function ServerCode(show){
     //Server Code
     const server = http.createServer((req, res)=>{
         fs.readFile('mainFrame.json', 'utf8', function(err, json){
             res.writeHead(200);
-            res.end(json);    
+            res.end(show);    
         });
         
         

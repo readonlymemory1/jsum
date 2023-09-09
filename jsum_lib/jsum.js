@@ -9,7 +9,7 @@ const fs = require('fs');
 let block = '<'
 
 fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
-    function object(type){
+    function objectCode(type){
         switch (type) {
             case 'button':
                 block =+ 'button';
@@ -47,5 +47,5 @@ fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
         }
 
     }
+    exports.objectCode = objectCode;
 });
-exports.type = type;
