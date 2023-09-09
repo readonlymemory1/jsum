@@ -1,0 +1,10 @@
+{
+   "button": [
+          {
+               "type":"button",
+               "id":"btn1",
+               "class":null,
+               "js":"alert('helloworld')"
+          }
+   ]
+}
