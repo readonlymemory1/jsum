@@ -32,6 +32,18 @@ fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
             case 'h5':
                 block =+ 'h5';
                 break;
+            case 'p':
+                block =+ 'p';
+                break;
+            case 'span':
+                block =+ 'span';
+                break;
+            case 'd':
+                block =+ 'd';
+                break;
+            case 'img':
+                block =+ 'img';
+                break;
         }
 
     }
