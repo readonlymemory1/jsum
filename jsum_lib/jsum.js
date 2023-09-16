@@ -6,48 +6,45 @@
  * version 1.0.0
  */
 const fs = require('fs');
-let block = '<'
-
-fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
-    function objectCode(type){
-        const JsumType = JSON.parse(type);
-        const test = String(JsumType.button.type);
-        switch (test) {
-            case 'button':
-                String(block) + 'button';
-                break;
-            case 'input':
-                block + 'input';
-                break;
-            case 'h1':
-                block + 'h1';
-                break;
-            case 'h2':
-                block + 'h2';
-                break;
-            case 'h3':
-                block + 'h3';
-                break;
-            case 'h4':
-                block + 'h4';
-                break;
-            case 'h5':
-                block + 'h5';
-                break;
-            case 'p':
-                block + 'p';
-                break;
-            case 'span':
-                block + 'span';
-                break;
-            case 'd':
-                block + 'd';
-                break;
-            case 'img':
-                block + 'img';
-                break;
-        }
-        return String(block);
+let supuerBlock = '<'
+function objectCode(object){
+    const obj = JSON.parse(object)
+    switch (obj) {
+        case 'button':
+            supuerBlock.push('button');
+            break;
+        case 'input':
+            supuerBlock.push('button');
+            break;
+        case 'h1':
+            supuerBlock.push('button');
+            break;
+        case 'h2':
+            superBlock.push('h2');
+            break;
+        case 'h3':
+            superBlock.push('h3');
+            break;
+        case 'h4':
+            superBlock.push('h4');
+            break;
+        case 'h5':
+            superBlock.push('h5');
+            break;
+        case 'p':
+            superBlock.push('p');
+            break;
+        case 'span':
+            superBlock.push('span');
+            break;
+        case 'd':
+            superBlock.push('d');
+             break;
+        case 'img':
+            superBlock.push('img');
+            break;
     }
-    exports.objectCode = objectCode;
-});
+    const block = supuerBlock.join('');
+    return String(block);
+}
+exports.objectCode = objectCode; 
