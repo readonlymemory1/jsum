@@ -7,5 +7,12 @@
       "class":null,
       "js":"alert('helloworld')"
           
+   },
+   "input":{
+      
+      "type":"input",
+      "id":"ipt",
+      "class":null
+      
    }
 }
