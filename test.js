@@ -1,20 +1,26 @@
-/*******
- * I'm noob developer
- * 
- * WARNING: I don't know what will happen to this library.
- * 
- * version 1.0.0
- */
-const fs = require('fs');
-let block = '<'
+const fs  = require("fs");
 
-fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
-    function objectCode(type){
-        const JsumType = JSON.parse(type);
+
+
+    function objectCode(){
+        var supuerBlock = ['<']
+        const JsumType = JSON.parse(`{
+            "button": {
+                   
+               "text":"helloworld",
+               "type":"button",
+               "id":"btn1",
+               "class":null,
+               "js":"alert('helloworld')"
+                   
+            }
+         }`);
         const test = String(JsumType.button.type);
         switch (test) {
             case 'button':
-                String(block) + 'button';
+                supuerBlock.push('button');
+                
+
                 break;
             case 'input':
                 block + 'input';
@@ -47,7 +53,8 @@ fs.readFile('mainFrame.json', 'utf8', (err, data)=>{
                 block + 'img';
                 break;
         }
+        const block = supuerBlock.join('');
         return String(block);
     }
-    exports.objectCode = objectCode;
-});
+        console.log(objectCode()); 
+

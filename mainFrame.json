@@ -1,10 +1,11 @@
 {
-   "button": [
-          {
-               "type":"button",
-               "id":"btn1",
-               "class":null,
-               "js":"alert('helloworld')"
-          }
-   ]
+   "button": {
+          
+      "text":"helloworld",
+      "type":"button",
+      "id":"btn1",
+      "class":null,
+      "js":"alert('helloworld')"
+          
+   }
 }
