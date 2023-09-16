@@ -1,7 +1,6 @@
 //import line
 const  http = require('http');
 const fs = require('fs');
-const jsum = require('./jsum_lib/jsum.js');
 
 function ServerCode(show){
     //Server Code
@@ -17,4 +16,4 @@ function ServerCode(show){
     server.listen(3000);
 }
 console.log("start server")
-exports.ServerCode = ServerCode;
+exports.ServerCode = ServerCode; 

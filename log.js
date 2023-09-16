@@ -5,9 +5,9 @@ function logc(){
     fs.readFile('mainFrame.json', 'utf8', function(err, data){
         console.log('link: http://localhost:3000');
         console.log('code:\n' +data);
-        let btn = jsum.objectCode(data);
-        console.log();
+        const jsonCode = JSON.parse();
+        console.log(jsum.objectCode(data));
     });
 
 }
-exports.logc = logc;
+exports.logc = logc; 
